@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Letter for You</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: pink url('https://www.transparenttextures.com/patterns/hearts.png');
+      background-size: contain;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      color: #d6336c;
+    }
+
+    h1 {
+      font-size: 8vw;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 12px 24px;
+      font-size: 5vw;
+      max-width: 90%;
+      background-color: #ff69b4;
+      border: none;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ff85c1;
+    }
+
+    #message {
+      margin-top: 30px;
+      font-size: 6vw;
+      display: none;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* Optional: Cap font sizes on larger screens */
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 3em;
+      }
+      button {
+        font-size: 1.2em;
+      }
+      #message {
+        font-size: 2em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Letter for you</h1>
+  <button onclick="showMessage()">press this button</button>
+  <div id="message">I'm into you ❤️</div>
+
+  <script>
+    function showMessage() {
+      document.getElementById('message').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
